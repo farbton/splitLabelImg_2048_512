@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>splitLabelImg_2048_512</Name>
     <RootNamespace>splitLabelImg_2048_512</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|rotateImg</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="reader.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="splitImg.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="splitLabelImg_2048_512.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|rotateImg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="out\" />
+    <Folder Include="source\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
