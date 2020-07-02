@@ -29,6 +29,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="splitLabelImg_2048_512.py" />
+    <Compile Include="writer.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="CondaEnv|CondaEnv|rotateImg" />
